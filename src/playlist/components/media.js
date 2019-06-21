@@ -12,13 +12,13 @@ class  Mediasss extends Component {
   handleClickkk = (event) => {
     //console.log(this.props.title);
     this.setState({ //setState change the state of the atribute
-      author: 'Pirooo Takahashi',
+      author: 'Chikoritaa Takahashi',
     });
   };
 
   render() {
     //the states are changeable, the props NOT
-    const { image, title } = this.props; //destructuring, basicamente busca image y title en el objeto props
+    const { cover, title } = this.props; //destructuring, basicamente busca cover y title en el objeto props
     const { author } = this.state; //destructuring
     const styles = {
         container: {
@@ -32,11 +32,10 @@ class  Mediasss extends Component {
     //This is JSX
     return (
 
-     <div className="Media" onClick={this.handleClickkk}> {/*Media is from media.css || handleClickkk is the handler for onClick*/}
-     {/*<div className="Media">*/}
-        <div className="Media-cover">
-        <img className="Media-image"
-             src={image}
+     <div className="Media" onClick={this.handleClickkk}> {/*Media is for media.css || handleClickkk is the handler for onClick*/}
+        <div className="Media-image">
+        <img className="Media-cover"
+             src={cover}
              alt=""
              width={260} heigth={160}
         />
@@ -50,7 +49,7 @@ class  Mediasss extends Component {
 
 // We are going to validate the data
 Mediasss.propTypes = {
-  image: PropT.string,
+  cover: PropT.string,
   title: PropT.string.isRequired, // To validate if the value is compulsory
   author: PropT.string,
   type: PropT.oneOf(['video', 'audio']), //To validate the type of component
