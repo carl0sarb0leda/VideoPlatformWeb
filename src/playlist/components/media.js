@@ -11,12 +11,13 @@ class  Mediasss extends Component {
 
   handleClickkk = (event) => {
     //console.log(this.props.title);
-    this.setState({
+    this.setState({ //setState change the state of the atribute
       author: 'Pirooo Takahashi',
     });
   };
 
   render() {
+    //the states are changeable, the props NOT
     const { image, title } = this.props; //destructuring
     const { author } = this.state; //destructuring
     const styles = {
@@ -28,9 +29,10 @@ class  Mediasss extends Component {
         },
       };
 
+    //This is JSX
     return (
 
-     <div className="Media" onClick={this.handleClickkk}> {/*Media is from media.css*/}
+     <div className="Media" onClick={this.handleClickkk}> {/*Media is from media.css || handleClickkk is the handler for onClick*/}
      {/*<div className="Media">*/}
         <div className="Media-cover">
         <img className="Media-image"
@@ -53,4 +55,5 @@ Mediasss.propTypes = {
   author: PropT.string,
   type: PropT.oneOf(['video', 'audio']), //To validate the type of component
 };
+
 export default Mediasss;

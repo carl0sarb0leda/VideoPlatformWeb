@@ -1,6 +1,7 @@
 import React from 'react'; //divide in components or react elements
 import { render } from 'react-dom'; //this is for render the components
 import Mediasss from './src/playlist/components/media.js';
+import dataaa from './src/api.json';
 
 //console.log('Hiii ;)');
 const app = document.getElementById('app');
