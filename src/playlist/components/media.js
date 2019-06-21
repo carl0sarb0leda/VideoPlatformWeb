@@ -4,7 +4,7 @@ import './media.css';
 
 class  Mediasss extends Component {
 
-  //Constructor for states
+  //Constructor for states, se crea un objeto que sea modificable ya que props no lo es
   state = {
     author: this.props.author,
   };
@@ -18,7 +18,7 @@ class  Mediasss extends Component {
 
   render() {
     //the states are changeable, the props NOT
-    const { image, title } = this.props; //destructuring
+    const { image, title } = this.props; //destructuring, basicamente busca image y title en el objeto props
     const { author } = this.state; //destructuring
     const styles = {
         container: {
@@ -44,7 +44,7 @@ class  Mediasss extends Component {
         <p className="Media-author">{author}</p>
         </div>
       </div>
-    );
+    )
   }
 }
 
