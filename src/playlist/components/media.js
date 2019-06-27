@@ -1,8 +1,10 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropT from 'prop-types';
 import './media.css';
 
-class  Mediasss extends Component {
+//PURE COMPONENT
+ 
+class  Mediasss extends PureComponent {
 
   //Constructor for states, se crea un objeto que sea modificable ya que props no lo es
   state = {
