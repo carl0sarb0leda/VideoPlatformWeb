@@ -3,21 +3,28 @@ import Medias from './media';
 
 class Playlisttt extends Component {
     render() {
-        const playli = this.props.dataq.categories[0].playlist //asi esta definido en api.json para seleccionar los elementos de la primera playlist
-        console.log(this.props.dataq);
+        
+        const categ = this.props.dataq.categories
+        
 
         return (
             <div>
-                {/* <Medias title={playli[0].title}/> */}
-                    {
-                        playli.map((item)=>{
+                    {//First the categories are mapped, to obtain the list
+                        categ.map((list)=>{ 
                             return(
-                            // <Medias title={item.title} image={item.cover} key={item.id}/>
-                            //Equivalent to ↓↓↓↓
-                            <Medias {...item} key={item.id}/>
+                                <div key={list.id}>
+                                    { //Second the list are mapped, to obtain the playlist
+                                        list.playlist.map((item)=>{
+                                            return(
+                                                <Medias {...item} key={item.id}/>
+                                            )
+                                        })
+                                    }
+                                    
+                                </div>   
                             )
                         })
-                    }
+                   }
             </div>
         )
     }
