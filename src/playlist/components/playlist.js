@@ -1,37 +1,40 @@
 import React from 'react'
 import Medias from './media'
-import PlayI from '../../icons/components/play'
+import PlayIcon from '../../icons/components/play'
+import PauseIcon from '../../icons/components/pause'
+import VolumeIcon from '../../icons/components/volume'
+import FullScreenIcon from '../../icons/components/fullScreen'
 
 //FUNCTIONAL COMPONENT
 
-function Playlisttt (props) {
-        
-        const categ = props.dataq.categories //dataq is from index.js
+function Playlisttt(props) {
 
-        return (
-            <div>
-                <PlayI 
-                    size={50}
-                    color="blue"
-                /> 
-                {//First the categories are mapped, to obtain the list
-                    categ.map((list) => {
-                        return (
-                            <div key={list.id}>
-                                { //Second the list are mapped, to obtain the playlist
-                                    list.playlist.map((item) => {
-                                        return (
-                                            <Medias {...item} key={item.id} />
-                                        )
-                                    })
-                                }
+    const categ = props.dataq.categories //dataq is from index.js
 
-                            </div>
-                        )
-                    })
-                }
-            </div>
-        )
+    return (
+        <div>
+            {//First the categories are mapped, to obtain the list
+                categ.map((list) => {
+                    return (
+                        <div key={list.id}>
+                            <PlayIcon size={40} color="black" />
+                            <PauseIcon size={40} color="green" />
+                            <VolumeIcon size={40} color='grey'/>
+                            <FullScreenIcon size={40} color='purple'></FullScreenIcon> {/*Another valid way*/}
+                            { //Second the list are mapped, to obtain the playlist
+                                list.playlist.map((item) => {
+                                    return (
+                                        <Medias {...item} key={item.id} />
+                                    )
+                                })
+                            }
+
+                        </div>
+                    )
+                })
+            }
+        </div>
+    )
 }
 
 export default Playlisttt;
