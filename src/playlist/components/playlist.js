@@ -43,7 +43,7 @@ function Playlisttt(props) {
             {
                 list.map((item)=>{
                     return(
-                        <Medias {...item} key={item.id}></Medias>
+                        <Medias {...item} key={item.id} handleCli={props.handleCli}></Medias>
                     )
                 })
             }

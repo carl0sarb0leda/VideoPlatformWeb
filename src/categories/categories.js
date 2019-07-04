@@ -9,8 +9,7 @@ function Categories(props){
             {
                 props.categor.map((list)=>{
                     return (
-                        <Catego {...list} key={list.id}>
-                            
+                        <Catego {...list} key={list.id} handleCli={props.handleCli}>
                         </Catego>
                     )
                 })

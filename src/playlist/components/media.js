@@ -15,6 +15,7 @@ class  Mediasss extends PureComponent {
     //console.log(this.props.title);
     this.setState({ //setState change the state of the atribute
       author: 'Chikoritaa Takahashi',
+
     });
   };
 
@@ -34,8 +35,9 @@ class  Mediasss extends PureComponent {
     //This is JSX
     return (
 
-     <div className="Media" onClick={this.handleClickkk}> {/*Media is for media.css || handleClickkk is the handler for onClick*/}
-        <div className="Media-image">
+     //<div className="Media" onClick={this.handleClickkk}> {/*Media is for media.css || handleClickkk is the handler for onClick*/}
+     <div className="Media" onClick={this.props.handleCli}>
+      <div className="Media-image">
         <img className="Media-cover"
              src={cover}
              alt=""

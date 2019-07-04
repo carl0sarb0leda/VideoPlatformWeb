@@ -4,7 +4,7 @@ import { render } from 'react-dom'; //this is for render the components
 import HomeC from '../pages/containers/home-container';
 import dataaa from '../api.json';
 
-const app = document.getElementById('app');
+const app = document.getElementById('home-container');
 
 
 //ReactDOM.render(what i am going to render, where i am going to render)
