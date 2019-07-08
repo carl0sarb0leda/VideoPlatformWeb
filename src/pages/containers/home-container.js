@@ -27,13 +27,16 @@ class HomeContainer extends Component {
         return(
             <HandleErrors>
                 <HomeL>
+                
                     <Relat></Relat>
-
                     <Categories
                         categor={this.props.dat.categories}
                         handleCli={this.handleOpenModal}
-                    /> {/*dat is from home.js and categor is for Categories.js and categories is for search in api.json*/}
+                    > {/*dat is from home.js and categor is for Categories.js and categories is for search in api.json*/}
+                    </Categories>
+                    
                     {
+                        
                         this.state.modalVisible && //&& is a conditional, ModalC (the portal) will only render if the condition is true
                         <ModalC>
                             <Modal handleClick={this.handleCloseModal}></Modal>
