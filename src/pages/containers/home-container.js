@@ -6,6 +6,7 @@ import Relat from '../../pages/components/related'
 import ModalC from '../../widgets/containers/modal-container'
 import Modal from '../../widgets/components/modal'
 import HandleErrors from '../../errors/containers/error-container'
+import VP from '../../player/containers/video-player'
 
 class HomeContainer extends Component {
     state ={
@@ -29,6 +30,7 @@ class HomeContainer extends Component {
                 <HomeL>
                 
                     <Relat></Relat>
+                    <VP></VP>
                     <Categories
                         categor={this.props.dat.categories}
                         handleCli={this.handleOpenModal}
