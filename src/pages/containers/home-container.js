@@ -30,7 +30,7 @@ class HomeContainer extends Component {
                 <HomeL>
                 
                     <Relat></Relat>
-                    <VP></VP>
+                    <VP autoplay={true}/>
                     <Categories
                         categor={this.props.dat.categories}
                         handleCli={this.handleOpenModal}
