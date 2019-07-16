@@ -5,10 +5,12 @@ import Title from '../components/title-comp'
 import PlayPause from '../components/play-pause'
 import Timer from '../components/timer'
 import VPControls from '../components/video-player-controls'
-import formatTime from '../../utilities/utilities'
+import formatTime from '../../utilities/format-time'
 import ProgressBar from '../components/progress-bar'
 import Spinner from '../components/spinner'
 import Volume from '../components/volume'
+import FullScreen from '../components/full-screen'
+import browserDetection from '../../utilities/browser-detection'
 
 class VideoPlayer extends Component {
     state={
@@ -56,10 +58,41 @@ class VideoPlayer extends Component {
             mute: !this.state.mute
         })
     }
+    handleFullScreen = (event) => {
+        switch (browserDetection()) {
+            case 'mozilla':
+                !this.playerrr.mozFullScreen ?
+                    this.playerrr.mozRequestFullScreen()
+                    : document.mozCancelFullScreen();
+                break
+
+            case 'safari':
+                !this.playerrr.msFullscreenEnabled ?
+                    this.playerrr.msRequestFullscreen()
+                    : document.msExitFullscreen();
+                break
+
+            default:
+                if (!document.webkitIsFullScreen) { //webkit works just in Chrome
+                    //Go to full screen all the content
+                    this.playerrr.webkitRequestFullscreen() //playerrr is the reference to all VPLayout, due to setRef function
+                }
+                else {
+                    document.webkitExitFullscreen()
+                }
+                break
+
+        }
+    }
+    setRef = (element) =>{
+        this.playerrr = element
+    }
+
     render(){
         
         return(
-            <VPLayout>
+            <VPLayout
+                setRef={this.setRef}>
                 <Title 
                     titleee='PFFFFF'/>
                 <VPControls>
@@ -76,6 +109,8 @@ class VideoPlayer extends Component {
                     <Volume
                     handleVolumeChange={this.handleVolumeChange}
                     handleMute={this.handleMute}/>
+                    <FullScreen
+                    handleFS={this.handleFullScreen}/>
                 </VPControls>
                 <Spinner
                     active={this.state.loading}/>
