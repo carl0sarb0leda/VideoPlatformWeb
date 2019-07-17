@@ -5,7 +5,8 @@ import './related.css'
 function Related (){
     return(
         <div className="Related">
-            <img src={logo} width={250}></img>
+            {/* <img src={logo} width={250}></img> */}
+            <h2>Video Platform Test ☻</h2>
         </div>
     )
 }
