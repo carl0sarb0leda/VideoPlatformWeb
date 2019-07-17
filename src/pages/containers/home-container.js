@@ -13,9 +13,10 @@ class HomeContainer extends Component {
         modalVisible:false
     }
 
-    handleOpenModal = (event) =>{
+    handleOpenModal = (element) =>{
         this.setState({
-            modalVisible:true
+            modalVisible:true,
+            element //element: element  --sugar syntax
         })
     }
 
@@ -28,20 +29,25 @@ class HomeContainer extends Component {
         return(
             <HandleErrors>
                 <HomeL>
-                
+
                     <Relat></Relat>
-                    <VP autoplay={true}/>
+                   
                     <Categories
                         categor={this.props.dat.categories}
-                        handleCli={this.handleOpenModal}
+                        openModal={this.handleOpenModal}
                     > {/*dat is from home.js and categor is for Categories.js and categories is for search in api.json*/}
                     </Categories>
-                    
+
                     {
-                        
+
                         this.state.modalVisible && //&& is a conditional, ModalC (the portal) will only render if the condition is true
                         <ModalC>
-                            <Modal handleClick={this.handleCloseModal}></Modal>
+                            <Modal handleClick={this.handleCloseModal}>
+                                <VP 
+                                autoplay //autoplay={true} 
+                                src={this.state.element.src} //element.src search 'src' into the data from api
+                                title={this.state.element.title}/>
+                            </Modal>
                         </ModalC>
                     }
                 </HomeL>

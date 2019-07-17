@@ -11,13 +11,17 @@ class  Mediasss extends PureComponent {
     author: this.props.author,
   };
 
-  handleClickkk = (event) => {
-    //console.log(this.props.title);
-    this.setState({ //setState change the state of the atribute
-      author: 'Chikoritaa Takahashi',
+  // handleClickkk = (event) => {
+  //   //console.log(this.props.title);
+  //   this.setState({ //setState change the state of the atribute
+  //     author: 'Chikoritaa Takahashi',
 
-    });
-  };
+  //   });
+  // };
+
+handleClickkk = (event) => {
+  this.props.openModal(this.props) //to send all the properties from props to openModal
+}
 
   render() {
     //the states are changeable, the props NOT
@@ -36,7 +40,7 @@ class  Mediasss extends PureComponent {
     return (
 
      //<div className="Media" onClick={this.handleClickkk}> {/*Media is for media.css || handleClickkk is the handler for onClick*/}
-     <div className="Media" onClick={this.props.handleCli}>
+     <div className="Media" onClick={this.handleClickkk}>
       <div className="Media-image">
         <img className="Media-cover"
              src={cover}

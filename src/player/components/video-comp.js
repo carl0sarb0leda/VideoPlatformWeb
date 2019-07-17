@@ -22,9 +22,9 @@ class VideoComponent extends Component {
         return(
         <div className='Video'>
             <video 
-            controls
+            //controls
             autoPlay={this.props.autoplayyy}
-            src={this.props.srccc}
+            src={this.props.src}
             ref={this.setRef}
             onLoadedMetadata={this.props.handleLoadedMetadata}
             onTimeUpdate={this.props.handleTimeUpdate}

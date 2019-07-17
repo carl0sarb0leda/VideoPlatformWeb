@@ -94,7 +94,7 @@ class VideoPlayer extends Component {
             <VPLayout
                 setRef={this.setRef}>
                 <Title 
-                    titleee='PFFFFF'/>
+                    titleee={this.props.title}/>
                 <VPControls>
                     <PlayPause
                     pause={this.state.pauseB}
@@ -122,7 +122,7 @@ class VideoPlayer extends Component {
                     handleSeeking={this.handleSeeking}
                     handleSeeked={this.handleSeeked}
                     muteddd={this.state.mute}
-                    srccc='http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4'/>
+                    src={this.props.src}/>
                 
             </VPLayout>
         )
