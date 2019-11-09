@@ -7,15 +7,15 @@ import Search from '../widgets/containers/search-container'
 function Categories(props){
     return(
         <div className='Categories'>
-            <Search/>
-            {
-                props.categor.map((list)=>{
+            <Search pp={props.categor} openModal={props.openModal}/>
+            {/* {
+                props.categor.filter(props.searching).map((list)=>{
                     return (
                         <Catego {...list} key={list.id} openModal={props.openModal}>
                         </Catego>
                     )
                 })
-            }
+            } */}
         </div>
     )
 }

@@ -25,7 +25,14 @@ class HomeContainer extends Component {
             modalVisible: false
         })
     }
+    searchingFor = (term)=>{
+        return function(x){
+            console.log('oooo')
+            return x.title.toLowerCase().includes(term.toLowerCase()) || !term
+        }
+    }
     render(){
+        const filtered = this.props.dat.categories
         return(
             <HandleErrors>
                 <HomeL>
@@ -35,6 +42,7 @@ class HomeContainer extends Component {
                     <Categories
                         categor={this.props.dat.categories}
                         openModal={this.handleOpenModal}
+                        searching={this.searchingFor}
                     > {/*dat is from home.js and categor is for Categories.js and categories is for search in api.json*/}
                     </Categories>
 

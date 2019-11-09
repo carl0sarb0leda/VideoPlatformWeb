@@ -24,6 +24,14 @@ class SearchContainer extends Component {
         this.setState({
             value: event.target.value.replace(' ','.') //replace is just for replace the spaces for dots
         })
+        console.log(this.input.value)
+        console.log(this.state)
+    }
+    searchingFor = (term)=>{
+        return function(x){
+            console.log('oooo')
+            return x.title.toLowerCase().includes(term.toLowerCase()) || !term
+        }
     }
 
     render(){
@@ -33,6 +41,10 @@ class SearchContainer extends Component {
             setRefff={this.setInputRef}
             handleChange={this.handleInputChange}
             value={this.state.value}
+            categor={this.props.pp}
+            openModal={this.props.openModal}
+            val={this.state.value}
+            ser={this.searchingFor}
             ></Searchh>
         )
     }

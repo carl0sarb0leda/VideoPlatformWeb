@@ -6,8 +6,8 @@
       "title": "Destacados",
       "playlist": [
         {
-          "title": "¿Qué es responsive Design?",
-          "author": "LeonidasEsteban",
+          "title": "¿What is Responsive Design?",
+          "author": "Carlos Arboleda",
           "type": "video",
           "cover": "./images/covers/responsive.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
@@ -15,7 +15,7 @@
         },
         {
           "title": "Cómo optimizar la carga de un website",
-          "author": "LeonidasEsteban",
+          "author": "Chihiro Takahashi",
           "type": "video",
           "cover": "./images/covers/optimizar.jpg",
           "src": "http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4",

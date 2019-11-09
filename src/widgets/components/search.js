@@ -1,5 +1,6 @@
 import React from 'react'
 import './search.css'
+import Catego from '../../categories/category'
 // function Search (){
 //     return(
 //         <form></form>
@@ -20,15 +21,26 @@ import './search.css'
 
 const Search = (props) =>
     (
+        <div>
         <form className='Search' onSubmit={props.handleSubmitt}>
             <input 
             ref={props.setRefff}
             className='Search-input'
-            placeholder='Search'
+            placeholder='Search' 
             onChange={props.handleChange}
             value={props.value}
             ></input>
         </form>
+
+            {
+                props.categor.filter(props.ser(props.val)).map((list)=>{
+                    return (
+                        <Catego {...list} key={list.id} openModal={props.openModal}>
+                        </Catego>
+                    )
+                })
+            }
+        </div>
     )
 
 export default Search
