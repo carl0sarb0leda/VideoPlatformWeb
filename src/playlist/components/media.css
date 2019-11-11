@@ -14,6 +14,10 @@
   transition: .3s;
   box-shadow: 0 0 5px rgba(0,0,0,.3);
   height: 160px;
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
 }
 
 .Media-image {
@@ -29,4 +33,29 @@
 .Media-author {
   font-size: 12px;
   margin: 5px 0 0 0;
+}
+.Media-container {
+  position: relative;
+}
+.Media-middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+.Media-container:hover .Media-cover {
+  opacity: 0.3;
+}
+
+.Media-container:hover .Media-middle {
+  opacity: 1;
+}
+
+.text {
+  color: black;
+  font-size: 20px;
+  padding: 16px 32px;
 }

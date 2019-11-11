@@ -43,8 +43,8 @@ class SearchContainer extends Component {
             value={this.state.value}
             categor={this.props.pp}
             openModal={this.props.openModal}
-            val={this.state.value}
-            ser={this.searchingFor}
+            val={this.props.val}
+            ser={this.props.filter}
             ></Searchh>
         )
     }

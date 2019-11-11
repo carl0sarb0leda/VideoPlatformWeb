@@ -2,8 +2,8 @@
   "categories": [
     {
       "id": 1,
-      "description": "Lo mejor de la semana",
-      "title": "Destacados",
+      "description": "The best of the week",
+      "title": "Interesting",
       "playlist": [
         {
           "title": "¿What is Responsive Design?",
@@ -14,7 +14,7 @@
           "id": 1
         },
         {
-          "title": "Cómo optimizar la carga de un website",
+          "title": "How to optimize your time?",
           "author": "Chihiro Takahashi",
           "type": "video",
           "cover": "./images/covers/optimizar.jpg",
@@ -22,7 +22,7 @@
           "id": 2
         },
         {
-          "title": "Qué es Bitcoin",
+          "title": "What is Bitcoin?",
           "author": "Yograterol",
           "type": "video",
           "cover": "./images/covers/bitcoin.jpg",
@@ -30,7 +30,7 @@
           "id": 3
         },
         {
-          "title": "Que pasó con HTML5",
+          "title": "What happened with HTML5",
           "author": "Freddier",
           "type": "video",
           "cover": "./images/covers/html5.jpg",
@@ -38,7 +38,7 @@
           "id": 4
         },
         {
-          "title": "Lo mejor de Mejorando.la",
+          "title": "The best bloopers in past years",
           "author": "Cvander",
           "type": "video",
           "cover": "./images/covers/mejorandola.jpg",
@@ -49,8 +49,8 @@
     },
     {
       "id": 2,
-      "description": "Lo mejor para concentrarte",
-      "title": "Para programar",
+      "description": "The best to focus",
+      "title": "Coding",
       "playlist": [
         {
           "title": "One more time",
@@ -96,8 +96,55 @@
     },
     {
       "id": 3,
-      "description": "Si no te queda de otra",
-      "title": "Regueton",
+      "description": "Just have a good time",
+      "title": "Relax",
+      "playlist": [
+        {
+          "title": "Fragment",
+          "author": "Ever So Blue",
+          "type": "video",
+          "cover": "./images/covers/fragment.jpg",
+          "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
+          "id": 1
+        },
+        {
+          "title": "Filotimo",
+          "author": "Borghild Wenn",
+          "type": "video",
+          "cover": "./images/covers/filotimo.jpg",
+          "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
+          "id": 2
+        },
+        {
+          "title": "Field Trip",
+          "author": "Roman Melass",
+          "type": "video",
+          "cover": "./images/covers/fieldtrip.jpg",
+          "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
+          "id": 3
+        },
+        {
+          "title": "More than Close",
+          "author": "Oneke",
+          "type": "video",
+          "cover": "./images/covers/morethanclose.jpg",
+          "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
+          "id": 4
+        },
+        {
+          "title": "Imádlak",
+          "author": "Katona Ernesztina",
+          "type": "video",
+          "cover": "./images/covers/imadlak.jpg",
+          "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
+          "id": 5
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "description": "If you want a different option",
+      "title": "Pop",
       "playlist": [
         {
           "title": "Despacito",

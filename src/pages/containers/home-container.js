@@ -10,7 +10,8 @@ import VP from '../../player/containers/video-player'
 
 class HomeContainer extends Component {
     state ={
-        modalVisible:false
+        modalVisible:false,
+        val: ''
     }
 
     handleOpenModal = (element) =>{
@@ -25,24 +26,31 @@ class HomeContainer extends Component {
             modalVisible: false
         })
     }
-    searchingFor = (term)=>{
+    handleChange =(event) =>{
+        this.setState({
+            val: event.target.value //event.target.value point to the <select> label, the property value of the label
+        })
+    }
+    filterFor = (term)=>{
         return function(x){
-            console.log('oooo')
+            console.log(term)
             return x.title.toLowerCase().includes(term.toLowerCase()) || !term
         }
     }
+
     render(){
-        const filtered = this.props.dat.categories
+
         return(
             <HandleErrors>
                 <HomeL>
 
-                    <Relat></Relat>
+                    <Relat val={this.state.val} handleChange={this.handleChange}></Relat>
                    
                     <Categories
                         categor={this.props.dat.categories}
                         openModal={this.handleOpenModal}
-                        searching={this.searchingFor}
+                        val={this.state.val}
+                        filter={this.filterFor}
                     > {/*dat is from home.js and categor is for Categories.js and categories is for search in api.json*/}
                     </Categories>
 

@@ -7,7 +7,7 @@ import Search from '../widgets/containers/search-container'
 function Categories(props){
     return(
         <div className='Categories'>
-            <Search pp={props.categor} openModal={props.openModal}/>
+            <Search pp={props.categor} val={props.val} openModal={props.openModal} filter={props.filter}/>
             {/* {
                 props.categor.filter(props.searching).map((list)=>{
                     return (
